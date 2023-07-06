@@ -4615,6 +4615,44 @@ __metadata:
   languageName: node
   linkType: hard
 
+"kleroscon-website@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "kleroscon-website@workspace:."
+  dependencies:
+    "@commitlint/cli": ^16.1.0
+    "@commitlint/config-conventional": ^16.0.0
+    "@parcel/compressor-brotli": ~2.7.0
+    "@parcel/compressor-gzip": ~2.7.0
+    "@parcel/transformer-svg-react": ~2.7.0
+    "@types/aos": ^3.0.4
+    "@types/react": ^18.0.24
+    "@types/react-dom": ^18.0.8
+    "@types/styled-components": ^5.1.26
+    "@typescript-eslint/eslint-plugin": ^5.10.1
+    "@typescript-eslint/parser": ^5.10.1
+    aos: next
+    eslint: ^8.7.0
+    eslint-config-prettier: ^8.3.0
+    eslint-import-resolver-parcel: ^1.10.6
+    eslint-plugin-import: ^2.25.4
+    eslint-plugin-prettier: ^4.0.0
+    eslint-plugin-react: ^7.28.0
+    eslint-plugin-react-hooks: ^4.3.0
+    eslint-plugin-security: ^1.4.0
+    husky: ^7.0.4
+    lint-staged: ^12.3.2
+    parcel: ~2.7.0
+    prettier: ^2.5.1
+    process: ^0.11.10
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-is: ^18.2.0
+    react-use: ^17.4.0
+    styled-components: ^5.3.6
+    typescript: ^4.5.5
+  languageName: unknown
+  linkType: soft
+
 "levn@npm:^0.4.1":
   version: 0.4.1
   resolution: "levn@npm:0.4.1"
@@ -7062,44 +7100,6 @@ __metadata:
   checksum: 35703ac889d419cf2aceef63daeadbe4e77227c39ab6287eeb6c1b36a746b364f50ba22e88591f5d017bc54685d8137bc2d328d0a896e4d3fd22093c0f32a9ad
   languageName: node
   linkType: hard
-
-"vea-landing-page@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "vea-landing-page@workspace:."
-  dependencies:
-    "@commitlint/cli": ^16.1.0
-    "@commitlint/config-conventional": ^16.0.0
-    "@parcel/compressor-brotli": ~2.7.0
-    "@parcel/compressor-gzip": ~2.7.0
-    "@parcel/transformer-svg-react": ~2.7.0
-    "@types/aos": ^3.0.4
-    "@types/react": ^18.0.24
-    "@types/react-dom": ^18.0.8
-    "@types/styled-components": ^5.1.26
-    "@typescript-eslint/eslint-plugin": ^5.10.1
-    "@typescript-eslint/parser": ^5.10.1
-    aos: next
-    eslint: ^8.7.0
-    eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-parcel: ^1.10.6
-    eslint-plugin-import: ^2.25.4
-    eslint-plugin-prettier: ^4.0.0
-    eslint-plugin-react: ^7.28.0
-    eslint-plugin-react-hooks: ^4.3.0
-    eslint-plugin-security: ^1.4.0
-    husky: ^7.0.4
-    lint-staged: ^12.3.2
-    parcel: ~2.7.0
-    prettier: ^2.5.1
-    process: ^0.11.10
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-is: ^18.2.0
-    react-use: ^17.4.0
-    styled-components: ^5.3.6
-    typescript: ^4.5.5
-  languageName: unknown
-  linkType: soft
 
 "weak-lru-cache@npm:^1.2.2":
   version: 1.2.2
