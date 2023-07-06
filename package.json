@@ -5,7 +5,7 @@
   "repository": "",
   "author": "",
   "license": "MIT",
-  "packageManager": "yarn@3.1.1",
+  "packageManager": "yarn@1.22.19",
   "scripts": {
     "clear": "rm -r .parcel-cache",
     "clean": "rm dist/bundle.js",
@@ -58,6 +58,6 @@
   },
   "volta": {
     "node": "16.18.1",
-    "yarn": "3.3.1"
+    "yarn": "1.22.19"
   }
 }
