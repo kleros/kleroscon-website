@@ -1,12 +1,19 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
+import Layout from "components/Layout";
+import Banner from "components/Banner";
+import TheVenue from "components/TheVenue";
+import Countdown from "./components/Countdown";
+import AboutKleros from "./components/AboutKleros";
+import Speakers from "./components/Speakers";
+import NewsletterCard from "./components/NewsletterCard";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-`
+`;
 
 const MiddleSections = styled.div`
   max-width: 1700px;
@@ -15,12 +22,23 @@ const MiddleSections = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 128px;
-`
+`;
 
-const App = () => (
-  <div>
-    KlerosCon landing page
-  </div>
-)
+const App = () => {
+  return (
+    <Layout>
+      <Banner />
+      <Countdown />
+      <AboutKleros />
+      <TheVenue />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <Speakers />
+      <NewsletterCard />
+    </Layout>
+  );
+};
 
-export default App
+export default App;

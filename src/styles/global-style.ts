@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: "Oxanium", sans-serif;
+    font-family: "Comic Sans MS", sans-serif;
     background-color: ${({ theme }) => theme.color.dark};
   }
 

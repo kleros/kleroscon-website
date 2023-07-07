@@ -1,11 +1,48 @@
 {
   "compilerOptions": {
-    "experimentalDecorators": true,
     "baseUrl": ".",
+    "paths": {
+      "~*": [
+        "./*"
+      ],
+      "src*": [
+        "./src*"
+      ],
+      "hooks*": [
+        "./src/hooks*"
+      ],
+      "queries*": [
+        "./src/hooks/queries*"
+      ],
+      "consts*": [
+        "./src/consts*"
+      ],
+      "contexts*": [
+        "./src/contexts*"
+      ],
+      "styles*": [
+        "./src/styles*"
+      ],
+      "svgs*": [
+        "./src/assets/svgs*"
+      ],
+      "utils*": [
+        "./src/utils*"
+      ],
+      "components*": [
+        "./src/components*"
+      ]
+    },
+    "experimentalDecorators": true,
     "outDir": "build/dist",
     "module": "esnext",
     "target": "es2017",
-    "lib": ["es6", "dom", "esnext.asynciterable", "es2017"],
+    "lib": [
+      "es6",
+      "dom",
+      "esnext.asynciterable",
+      "es2017"
+    ],
     "sourceMap": true,
     "allowJs": true,
     "jsx": "react",
@@ -22,12 +59,8 @@
     "allowSyntheticDefaultImports": true,
     "removeComments": true,
     "isolatedModules": true,
-    "paths": {
-      "components/*": ["./src/components/*"],
-      "svgs/*": ["./src/assets/svgs/*"],
-      "styles/*": ["./src/styles/*"],
-      "hooks/*": ["./src/hooks/*"]
-    }
+    "esModuleInterop": true,
+    "resolveJsonModule": true
   },
   "exclude": [
     "node_modules",
