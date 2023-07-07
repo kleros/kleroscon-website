@@ -8,6 +8,7 @@ export const theme = {
     primaryBlue: "#6CC5FF",
     blue: "#69C3FC",
     lightPurple: "#9F55DF",
+    secondaryLightPurple: "#7E1BD4",
     darkPurple: "#220050",
     purple: "#1F0847",
     grey: "#E5E5E5",

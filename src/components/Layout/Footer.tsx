@@ -1,48 +1,102 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import FooterBackground from "tsx:svgs/icons/footer-background.svg";
+import KlerosConText from "tsx:svgs/icons/kleroscon-text.svg";
+import SecuredByKleros from "tsx:svgs/icons/secured-by-kleros.svg";
+import IconTwitter from "tsx:svgs/icons/twitter.svg";
+import IconGithub from "tsx:svgs/icons/github.svg";
+import IconTelegram from "tsx:svgs/icons/telegram.svg";
+import IconDiscord from "tsx:svgs/icons/discord.svg";
+import IconGhostBlog from "tsx:svgs/icons/ghost-blog.svg";
+import DecorativeLine from "tsx:svgs/icons/decorative-line.svg";
 import { smallScreenStyle } from "styles/smallScreenStyle";
-import footerURL from "svgs/icons/footer.svg";
 
-// const LINKS = [
-//   {
-//     Icon: IconTwitter,
-//     href: "https://www.twitter.com/vea_eth",
-//   },
-//   {
-//     Icon: IconGithub,
-//     href: "https://www.github.com/kleros/vea",
-//   },
-//   {
-//     Icon: IconTelegram,
-//     href: "https://t.me/veabridge",
-//   },
-// ];
+const LINKS = [
+  {
+    Icon: IconTwitter,
+    href: "https://www.twitter.com/kleros_io",
+  },
+  {
+    Icon: IconTelegram,
+    href: "https://t.me/kleros",
+  },
+  {
+    Icon: IconDiscord,
+    href: "https://discord.com/invite/MhXQGCyHd9",
+  },
+  {
+    Icon: IconGhostBlog,
+    href: "https://blog.kleros.io/",
+  },
+  {
+    Icon: IconGithub,
+    href: "https://www.github.com/kleros",
+  },
+];
 
 const Container = styled.div`
-  width: 100%;
-`;
-
-const InnerContainer = styled.div`
   position: relative;
-  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 32px;
+  background: linear-gradient(90deg, #7e1bd4 0%, #b45fff 100%);
+
   ${smallScreenStyle(css`
-    margin-bottom: 32px;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    height: 280px;
   `)}
 `;
 
-const Logo = styled.h2`
-  text-align: center;
-  margin: 20px;
+const InnerContainer = styled.div`
+  display: flex;
+  width: 100%;
+  margin-left: 32px;
+  ${smallScreenStyle(css`
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+  `)};
+`;
+
+const StyledFooterBackground = styled(FooterBackground)`
+  position: absolute;
+  z-index: 1;
+  height: 243px;
+  width: 100%;
+`;
+
+const StyledKlerosConText = styled(KlerosConText)`
+  width: 471px;
+  height: 69px;
 
   ${smallScreenStyle(css`
-    position: relative;
-    font-size: 46px;
+    width: 300px;
+  `)}
+`;
+
+const StyledSecuredByKleros = styled(SecuredByKleros)`
+  width: 201px;
+  height: 27px;
+  margin-top: 32px;
+  margin-left: 24px;
+  ${smallScreenStyle(css`
+    top: 100%;
+    left: 0%;
+    margin-left: 0px;
+  `)}
+`;
+
+const LeftSide = styled.div`
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  ${smallScreenStyle(css`
+    align-items: center;
+    justify-content: flex-start;
   `)}
 `;
 
@@ -52,11 +106,11 @@ const StyledLink = styled.a`
   align-items: center;
   justify-content: center;
   > svg {
-    fill: ${({ theme }) => theme.color.lightBlue};
+    fill: ${({ theme }) => theme.color.secondaryLightPurple};
     width: 32px;
     transition: fill 0.25s ease, transform 0.25s ease;
     :hover {
-      fill: ${({ theme }) => theme.color.blue};
+      fill: ${({ theme }) => theme.color.darkPurple};
       transform: scale(1.05);
     }
   }
@@ -68,19 +122,45 @@ const SocialMedia = styled.div`
   right: 5%;
   transform: translateY(-50%);
   display: flex;
-  gap: 16px;
+  gap: 32px;
+  z-index: 2;
 
   ${smallScreenStyle(css`
     position: relative;
-    right: 0%;
-    margin-top: 30px;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+    justify-content: center;
+    margin-top: 48px;
   `)}
 `;
 
 const Footer: React.FC = () => (
-  <Container>
-    <img src={footerURL} alt="Kleros Court Icon" />;
-  </Container>
+  <>
+    <DecorativeLine />
+    <Container>
+      <StyledFooterBackground />
+      <InnerContainer>
+        <LeftSide>
+          <StyledKlerosConText />
+          <StyledSecuredByKleros />
+        </LeftSide>
+        <SocialMedia>
+          {LINKS.map(({ href, Icon }) => (
+            <StyledLink
+              key={href}
+              {...{ href }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon />
+            </StyledLink>
+          ))}
+        </SocialMedia>
+      </InnerContainer>
+    </Container>
+  </>
 );
 
 export default Footer;
