@@ -25,7 +25,7 @@
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
     "@parcel/compressor-brotli": "~2.7.0",
-    "@parcel/transformer-svg-react": "~2.7.0",
+    "@parcel/transformer-svg-react": "^2.9.3",
     "@types/aos": "^3.0.4",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
@@ -48,14 +48,14 @@
     "typescript": "^4.5.5"
   },
   "dependencies": {
+    "@kleros/ui-components-library": "^2.5.2",
     "@parcel/compressor-gzip": "~2.7.0",
     "aos": "next",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
     "react-use": "^17.4.0",
-    "styled-components": "^5.3.6",
-    "@kleros/ui-components-library": "^2.5.2"
+    "styled-components": "^5.3.6"
   },
   "volta": {
     "node": "16.18.1",

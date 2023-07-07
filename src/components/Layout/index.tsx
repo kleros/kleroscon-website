@@ -27,7 +27,7 @@ const Layout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const [ref, { height: navbarHeight }] = useElementOffsets();
   return (
     <div>
-      <Navbar ref={ref} />
+      <Navbar />
       <Content {...{ navbarHeight }}>
         <MiddleContent> {children} </MiddleContent>
         <Footer />

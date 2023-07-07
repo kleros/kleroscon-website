@@ -1,6 +1,6 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
-import klerosIconURL from "svgs/icons/kleros.svg";
+import KlerosIcon from "tsx:svgs/icons/kleros.svg";
 import Menu from "./Menu";
 
 const Container = styled.div`
@@ -12,25 +12,32 @@ const Container = styled.div`
   padding: 0 8%;
   display: flex;
   justify-content: space-between;
+  overflow-x: hidden;
   align-items: center;
   border-image-slice: 1;
 `;
 
-const StyledLogo = styled.div`
-  display: flex;
-  align-items: center;
+const StyledKlerosIcon = styled(KlerosIcon)`
+  position: absolute;
+  left: 3%;
+  width: 148px;
+  height: 48px;
 `;
 
-const Navbar = forwardRef((_, ref) => (
-  <Container ref={ref}>
-    <StyledLogo>
-      <img src={klerosIconURL} alt="Kleros Court Icon" />
-    </StyledLogo>
-    <StyledLogo>
-      <Menu />
-    </StyledLogo>
-  </Container>
-));
-Navbar.displayName = "Navbar";
+const MenuContainer = styled.div`
+  position: absolute;
+  right: 0;
+`;
+
+const Navbar: React.FC = () => {
+  return (
+    <Container>
+      <StyledKlerosIcon />
+      <MenuContainer>
+        <Menu />
+      </MenuContainer>
+    </Container>
+  );
+};
 
 export default Navbar;

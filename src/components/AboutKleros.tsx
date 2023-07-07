@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import aboutKlerosURL from "svgs/icons/about-kleros.svg";
+import AboutKlerosIcon from "tsx:svgs/icons/about-kleros.svg";
 
 interface IAboutKleros {}
 
 const Container = styled.div`
   height: 553px;
   display: flex;
+  overflow-x: hidden;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
@@ -15,7 +16,8 @@ const Container = styled.div`
 const AboutKleros: React.FC<IAboutKleros> = ({}) => {
   return (
     <Container>
-      <img src={aboutKlerosURL} alt="Kleros Court Icon" />;
+      {/* <img src={aboutKlerosURL} alt="Kleros Court Icon" />; */}
+      <AboutKlerosIcon />
     </Container>
   );
 };
