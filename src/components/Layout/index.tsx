@@ -23,6 +23,7 @@ const Content = styled.div<{ navbarHeight: number }>`
   justify-content: space-between;
 `;
 
+//
 const Layout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const [ref, { height: navbarHeight }] = useElementOffsets();
   return (

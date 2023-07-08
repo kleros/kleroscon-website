@@ -45,6 +45,7 @@ const HamburgerMenu = styled.div`
     display: flex;
     flex-direction: column;
     gap: 24px;
+    z-index: 1;
   `)}
 `;
 

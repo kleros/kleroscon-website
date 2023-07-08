@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Layout from "components/Layout";
 import Banner from "components/Banner";
-import TheVenue from "components/TheVenue";
+import Venue from "components/Venue";
 import Countdown from "./components/Countdown";
 import AboutKleros from "./components/AboutKleros";
 import Speakers from "./components/Speakers";
@@ -30,7 +30,7 @@ const App = () => {
       <Banner />
       <Countdown />
       <AboutKleros />
-      <TheVenue />
+      <Venue />
       <br></br>
       <br></br>
       <br></br>

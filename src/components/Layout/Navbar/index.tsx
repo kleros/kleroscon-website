@@ -12,7 +12,6 @@ const Container = styled.div`
   padding: 0 8%;
   display: flex;
   justify-content: space-between;
-  overflow-x: hidden;
   align-items: center;
   border-image-slice: 1;
 `;

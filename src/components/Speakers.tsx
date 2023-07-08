@@ -41,7 +41,7 @@ const StyledSectionSeparatorPurple = styled(SectionSeparator)`
 
 const Speakers: React.FC<ISpeakers> = ({}) => {
   return (
-    <Container>
+    <Container id="Speakers">
       <StyledSectionSeparatorBlue />
       <InnerContainer>
         <StyledTitle>Speakers</StyledTitle>
