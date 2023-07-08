@@ -6,7 +6,7 @@ import TheVenue from "components/TheVenue";
 import Countdown from "./components/Countdown";
 import AboutKleros from "./components/AboutKleros";
 import Speakers from "./components/Speakers";
-import NewsletterCard from "./components/NewsletterCard";
+import Newsletter from "./components/Newsletter";
 
 const Container = styled.div`
   display: flex;
@@ -36,7 +36,7 @@ const App = () => {
       <br></br>
       <br></br>
       <Speakers />
-      <NewsletterCard />
+      <Newsletter />
     </Layout>
   );
 };
