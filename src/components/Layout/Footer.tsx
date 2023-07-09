@@ -106,7 +106,7 @@ const StyledLink = styled.a`
   align-items: center;
   justify-content: center;
   > svg {
-    fill: ${({ theme }) => theme.color.secondaryLightPurple};
+    fill: ${({ theme }) => theme.color.secondaryDarkPurple};
     width: 32px;
     transition: fill 0.25s ease, transform 0.25s ease;
     :hover {

@@ -4,7 +4,7 @@ import Layout from "components/Layout";
 import Banner from "components/Banner";
 import Venue from "components/Venue";
 import Countdown from "./components/Countdown";
-import AboutKleros from "./components/AboutKleros";
+import AboutUs from "./components/AboutUs";
 import Speakers from "./components/Speakers";
 import Newsletter from "./components/Newsletter";
 
@@ -29,12 +29,8 @@ const App = () => {
     <Layout>
       <Banner />
       <Countdown />
-      <AboutKleros />
+      <AboutUs />
       <Venue />
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
       <Speakers />
       <Newsletter />
     </Layout>

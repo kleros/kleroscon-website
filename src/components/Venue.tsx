@@ -1,9 +1,10 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { smallScreenStyle } from "~src/styles/smallScreenStyle";
+import { smallScreenStyle } from "styles/smallScreenStyle";
 import Venue1 from "tsx:svgs/icons/venue-1.svg";
 import Venue2 from "tsx:svgs/icons/venue-2.svg";
 import LocationIcon from "tsx:svgs/icons/location.svg";
+import SectionSeparator from "tsx:svgs/section-separator.svg";
 
 const Container = styled.div`
   display: flex;
@@ -144,25 +145,35 @@ const AddressText = styled.p`
   `)};
 `;
 
+const StyledSectionSeparatorBlue = styled(SectionSeparator)`
+  stroke: ${({ theme }) => theme.color.blue};
+  width: 91vw;
+`;
+
 const Venue: React.FC = () => {
   return (
-    <Container id="Venue">
-      <VenueHeader>
-        <h2>The Venue</h2>
-        <LocationContainer>
-          <AddressContainer>
-            <LocationIcon />
-            <small>PAVILHÃO CARLOS LOPES</small>
-          </AddressContainer>
-          <p>Lisbon, Portugal</p>
-        </LocationContainer>
-      </VenueHeader>
-      <ImagesContainer>
-        <Venue1Image as={Venue1} />
-        <Venue2Image as={Venue2} />
-      </ImagesContainer>
-      <AddressText>Av. Sidónio Pais 16, 1070-051 Lisboa, Portugal</AddressText>
-    </Container>
+    <>
+      <Container id="Venue">
+        <VenueHeader>
+          <h2>The Venue</h2>
+          <LocationContainer>
+            <AddressContainer>
+              <LocationIcon />
+              <small>PAVILHÃO CARLOS LOPES</small>
+            </AddressContainer>
+            <p>Lisbon, Portugal</p>
+          </LocationContainer>
+        </VenueHeader>
+        <ImagesContainer>
+          <Venue1Image as={Venue1} />
+          <Venue2Image as={Venue2} />
+        </ImagesContainer>
+        <AddressText>
+          Av. Sidónio Pais 16, 1070-051 Lisboa, Portugal
+        </AddressText>
+      </Container>
+      <StyledSectionSeparatorBlue />
+    </>
   );
 };
 

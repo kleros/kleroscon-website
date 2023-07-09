@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
-import { smallScreenStyle } from "~src/styles/smallScreenStyle";
+import { smallScreenStyle } from "styles/smallScreenStyle";
 import CalendarIcon from "tsx:svgs/icons/calendar.svg";
+import DecorativeLine from "tsx:svgs/icons/decorative-line.svg";
 
 const Container = styled.div`
   display: flex;
@@ -75,6 +76,10 @@ const CountdownLabel = styled.span`
   line-height: 21.79px;
 `;
 
+const StyledDecorativeLine = styled(DecorativeLine)`
+  width: 100vw;
+`;
+
 const Seperator = styled.small`
   color: ${({ theme }) => theme.color.darkLilac};
   font-size: 48px;
@@ -109,28 +114,31 @@ const Countdown = () => {
   }, []);
 
   return (
-    <Container>
-      <EventContainer>
-        <DateContainer>
-          <StyledCalendar />
-          <small>November 9, 2023</small>
-        </DateContainer>
-        <p>Lisbon, Portugal</p>
-      </EventContainer>
-      <CountdownContainer>
-        {Object.keys(timeLeft).map((unit, index) => (
-          <React.Fragment key={unit}>
-            <CountdownItem>
-              <CountdownValue>{timeLeft[unit]}</CountdownValue>
-              <CountdownLabel>{unit}</CountdownLabel>
-            </CountdownItem>
-            {index < Object.keys(timeLeft).length - 1 && (
-              <Seperator>:</Seperator>
-            )}
-          </React.Fragment>
-        ))}
-      </CountdownContainer>
-    </Container>
+    <>
+      <Container>
+        <EventContainer>
+          <DateContainer>
+            <StyledCalendar />
+            <small>November 9, 2023</small>
+          </DateContainer>
+          <p>Lisbon, Portugal</p>
+        </EventContainer>
+        <CountdownContainer>
+          {Object.keys(timeLeft).map((unit, index) => (
+            <React.Fragment key={unit}>
+              <CountdownItem>
+                <CountdownValue>{timeLeft[unit]}</CountdownValue>
+                <CountdownLabel>{unit}</CountdownLabel>
+              </CountdownItem>
+              {index < Object.keys(timeLeft).length - 1 && (
+                <Seperator>:</Seperator>
+              )}
+            </React.Fragment>
+          ))}
+        </CountdownContainer>
+      </Container>
+      <StyledDecorativeLine />
+    </>
   );
 };
 

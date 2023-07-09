@@ -29,11 +29,6 @@ const StyledSubtitle = styled.div`
   margin-top: 48px;
 `;
 
-const StyledSectionSeparatorBlue = styled(SectionSeparator)`
-  stroke: ${({ theme }) => theme.color.blue};
-  width: 91vw;
-`;
-
 const StyledSectionSeparatorPurple = styled(SectionSeparator)`
   stroke: ${({ theme }) => theme.color.lightPurple};
   width: 91vw;
@@ -42,7 +37,6 @@ const StyledSectionSeparatorPurple = styled(SectionSeparator)`
 const Speakers: React.FC<ISpeakers> = ({}) => {
   return (
     <Container id="Speakers">
-      <StyledSectionSeparatorBlue />
       <InnerContainer>
         <StyledTitle>Speakers</StyledTitle>
         <StyledSubtitle>To be confirmed</StyledSubtitle>
