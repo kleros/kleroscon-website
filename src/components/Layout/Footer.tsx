@@ -62,6 +62,8 @@ const InnerContainer = styled.div`
 const StyledFooterBackground = styled(FooterBackground)`
   position: absolute;
   z-index: 1;
+  right: 0;
+  left: 0;
   height: 243px;
   width: 100%;
 `;

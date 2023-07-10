@@ -19,6 +19,7 @@ const MiddleContent = styled.div`
 const Content = styled.div<{ navbarHeight: number }>`
   min-height: calc(100vh - ${({ navbarHeight }) => navbarHeight}px);
   display: flex;
+  width: 100vw;
   flex-direction: column;
   justify-content: space-between;
 `;

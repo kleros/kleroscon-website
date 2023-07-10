@@ -12,8 +12,10 @@ const Container = styled.div`
   padding: 4%;
   align-items: center;
   overflow-x: hidden;
+  z-index: 1;
   background-color: ${({ theme }) => theme.color.darkPurple};
   ${smallScreenStyle(css`
+    gap: 16px;
     justify-content: center;
   `)};
 `;
@@ -35,6 +37,9 @@ const CountdownContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  ${smallScreenStyle(css`
+    justify-content: center;
+  `)};
 `;
 
 const DateContainer = styled.div`

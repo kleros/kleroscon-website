@@ -4,8 +4,8 @@ import KlerosIcon from "tsx:svgs/icons/kleros.svg";
 import Menu from "./Menu";
 
 const Container = styled.div`
-  height: 68px;
   position: sticky;
+  height: 68px;
   top: 0px;
   z-index: 2;
   background-color: ${({ theme }) => theme.color.lightPurple};

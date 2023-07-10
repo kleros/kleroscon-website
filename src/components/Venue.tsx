@@ -80,10 +80,9 @@ const VenueHeader = styled.div`
   h2 {
     margin-bottom: 6%;
     color: ${({ theme }) => theme.color.white};
-    font-size: 48px;
+    font-size: calc(36px + (48 - 36) * (100vw - 375px) / (1085 - 375));
     line-height: 65px;
     font-weight: 600;
-    /* width: calc(150px + (300 - 150) * (100vw - 375px) / (1085 - 375)); */
   }
 `;
 
@@ -118,7 +117,7 @@ const AddressContainer = styled.div`
     font-size: 24px;
     font-weight: 600;
     line-height: 32px;
-    width: calc(150px + (250 - 150) * (100vw - 375px) / (1085 - 375));
+    width: calc(140px + (250 - 140) * (100vw - 375px) / (1085 - 375));
     ${smallScreenStyle(css`
       width: fit-content;
     `)};
@@ -135,10 +134,11 @@ const AddressText = styled.p`
   right: 4%;
   top: 50%;
   color: ${({ theme }) => theme.color.lightBlue};
-  font-size: 16px;
+  font-size: calc(13px + (16 - 13) * (100vw - 375px) / (1085 - 375));
   font-weight: 400;
   line-height: 21px;
   margin-top: 6%;
+  text-align: end;
   ${smallScreenStyle(css`
     position: static;
     margin-top: 8px;

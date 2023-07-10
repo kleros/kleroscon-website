@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Layout from "components/Layout";
-import Banner from "components/Banner";
+import Hero from "./components/Hero";
 import Venue from "components/Venue";
 import Countdown from "./components/Countdown";
 import AboutUs from "./components/AboutUs";
@@ -12,6 +12,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
   width: 100%;
 `;
 
@@ -27,7 +28,7 @@ const MiddleSections = styled.div`
 const App = () => {
   return (
     <Layout>
-      <Banner />
+      <Hero />
       <Countdown />
       <AboutUs />
       <Venue />
