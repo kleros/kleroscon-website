@@ -1,6 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Button } from "@kleros/ui-components-library";
+import { smallScreenStyle } from "styles/smallScreenStyle";
 import SectionSeparator from "tsx:svgs/section-separator.svg";
 
 interface IAboutUs {}
@@ -13,6 +14,11 @@ const Container = styled.div`
   text-align: right;
   width: 90vw;
   gap: 32px;
+
+  ${smallScreenStyle(css`
+    align-items: center;
+    text-align: center;
+  `)};
 `;
 
 const AdjectivesContainer = styled.div`
@@ -20,6 +26,10 @@ const AdjectivesContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-end;
+
+  ${smallScreenStyle(css`
+    justify-content: center;
+  `)};
 `;
 
 const StyledTitle = styled.div`
