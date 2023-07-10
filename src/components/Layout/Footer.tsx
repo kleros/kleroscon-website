@@ -69,7 +69,7 @@ const StyledFooterBackground = styled(FooterBackground)`
 `;
 
 const StyledKlerosConText = styled(KlerosConText)`
-  width: calc(300px + (400 - 300) * ((100vw - 300px) / (1250 - 300)));
+  width: calc(300px + (471 - 300) * ((100vw - 300px) / (1250 - 300)));
   height: 69px;
 
   ${smallScreenStyle(css`
@@ -84,7 +84,6 @@ const StyledSecuredByKleros = styled(SecuredByKleros)`
   ${smallScreenStyle(css`
     top: 100%;
     left: 0%;
-    margin-left: 0px;
   `)}
 `;
 

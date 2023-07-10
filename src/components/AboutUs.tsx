@@ -8,7 +8,7 @@ interface IAboutUs {}
 
 const Container = styled.div`
   display: flex;
-  margin-top: calc(64px + (128 - 64) * ((100vw - 300px) / (1250 - 300)));
+  margin: calc(48px + (128 - 48) * ((100vw - 300px) / (1250 - 300))) 0px;
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
@@ -58,7 +58,6 @@ const StyledButton = styled(Button)`
 const StyledSectionSeparatorPurple = styled(SectionSeparator)`
   stroke: ${({ theme }) => theme.color.lightPurple};
   width: 91vw;
-  margin-top: calc(64px + (128 - 64) * ((100vw - 300px) / (1250 - 300)));
 `;
 
 const StyledAdjective = styled.span`

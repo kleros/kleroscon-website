@@ -8,8 +8,7 @@ const Container = styled.div``;
 
 const InnerContainer = styled.div`
   display: flex;
-  margin-top: 80px;
-  margin-bottom: 143px;
+  margin: calc(48px + (80 - 48) * ((100vw - 300px) / (1250 - 300))) 0px;
   flex-direction: column;
   align-items: center;
 `;

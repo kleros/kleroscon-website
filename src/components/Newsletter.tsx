@@ -10,8 +10,7 @@ const Container = styled.div`
   background-color: ${({ theme }) => theme.color.darkPurple};
   width: calc(240px + (1080 - 240) * ((100vw - 300px) / (1250 - 300)));
   padding: 26px calc(16px + (64 - 16) * ((100vw - 300px) / (1250 - 300)));
-  margin-top: 128px;
-  margin-bottom: 96px;
+  margin: calc(48px + (128 - 48) * ((100vw - 300px) / (1250 - 300))) 0px;
 
   &::before {
     content: "";

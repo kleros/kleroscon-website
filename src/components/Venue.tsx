@@ -13,7 +13,11 @@ const Container = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vw;
-  margin-top: 24px;
+
+  ${smallScreenStyle(css`
+    height: auto;
+    margin: calc(48px + (128 - 48) * ((100vw - 300px) / (1250 - 300))) 0px;
+  `)};
 `;
 
 const ImagesContainer = styled.div`
