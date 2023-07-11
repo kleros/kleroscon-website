@@ -68,8 +68,7 @@ const StyledFooterBackground = styled(FooterBackground)`
   height: 100%;
 
   ${smallScreenStyle(css`
-    width: 1240px;
-    height: 280px;
+    visibility: hidden;
   `)};
 `;
 
