@@ -60,11 +60,19 @@ const StyledCalendar = styled(CalendarIcon)`
   height: 24px;
 `;
 
-const CountdownItem = styled.div`
+const CountdownItem = styled.div<{ name: string }>`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 10px;
+  ${(props) =>
+    smallScreenStyle(
+      props.name === "seconds"
+        ? css`
+            display: none;
+          `
+        : css``
+    )}
 `;
 
 const CountdownValue = styled.span`
@@ -85,11 +93,20 @@ const StyledDecorativeLine = styled(DecorativeLine)`
   width: 100vw;
 `;
 
-const Seperator = styled.small`
+const Seperator = styled.small<{ name: string }>`
   color: ${({ theme }) => theme.color.darkLilac};
   font-size: 48px;
   font-weight: 600;
   line-height: 65px;
+  ${(props) =>
+    smallScreenStyle(
+      props.name === "minutes"
+        ? css`
+            display: none;
+            visibility: hidden;
+          `
+        : css``
+    )}
 `;
 
 const calculateTimeLeft = () => {
@@ -131,12 +148,12 @@ const Countdown = () => {
         <CountdownContainer>
           {Object.keys(timeLeft).map((unit, index) => (
             <React.Fragment key={unit}>
-              <CountdownItem>
+              <CountdownItem name={unit}>
                 <CountdownValue>{timeLeft[unit]}</CountdownValue>
                 <CountdownLabel>{unit}</CountdownLabel>
               </CountdownItem>
               {index < Object.keys(timeLeft).length - 1 && (
-                <Seperator>:</Seperator>
+                <Seperator name={unit}>:</Seperator>
               )}
             </React.Fragment>
           ))}

@@ -27,7 +27,7 @@ const MenuContainer = styled.div`
   `)}
 `;
 
-const HamburgerMenu = styled.div`
+const HamburgerMenu = styled.div<{ isOpen: boolean }>`
   opacity: 0;
   transition: opacity 0.25s ease, transform 0.25s ease;
   display: none;
