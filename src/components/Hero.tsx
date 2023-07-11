@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { smallScreenStyle } from "styles/smallScreenStyle";
 import KlerosLogo from "svgs/icons/hero-image.png";
-import Background from "svgs/icons/hero-background.png";
+import Background from "tsx:svgs/icons/hero-background.svg";
 
 const Container = styled.div`
   position: relative;
@@ -17,15 +17,6 @@ const Container = styled.div`
     align-items: center;
     gap: 48px;
   `)};
-`;
-
-const BackgroundImageContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
-  overflow-x: hidden;
 `;
 
 const Header = styled.div`
@@ -64,6 +55,19 @@ const Header = styled.div`
   `)};
 `;
 
+const StyledBackground = styled(Background)`
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+
+  ${smallScreenStyle(css`
+    height: 180%;
+  `)};
+`;
+
 const ImageContainer = styled.div`
   max-width: calc(60% + (100% - 60%) * (100vw - 375px) / (1085 - 375));
   max-height: calc(60% + (100% - 60%) * (100vw - 375px) / (1085 - 375));
@@ -89,9 +93,7 @@ const Hero: React.FC = () => {
       <ImageContainer>
         <Image src={KlerosLogo} alt="Kleros Icon with diamonds" />
       </ImageContainer>
-      <BackgroundImageContainer>
-        <img src={Background} alt="Kleros Icon" />
-      </BackgroundImageContainer>
+      <StyledBackground />
     </Container>
   );
 };

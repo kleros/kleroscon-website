@@ -21,6 +21,10 @@ const Container = styled.div`
   `)};
 `;
 
+const AdjectiveWithPlus = styled.div`
+  display: flex;
+`;
+
 const AdjectivesContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -28,7 +32,10 @@ const AdjectivesContainer = styled.div`
   justify-content: flex-end;
 
   ${smallScreenStyle(css`
+    justify-content: space-between;
+    max-width: 240px;
     justify-content: center;
+    margin: auto;
   `)};
 `;
 
@@ -64,6 +71,7 @@ const StyledAdjective = styled.span`
   color: ${({ theme }) => theme.color.darkLilac};
   font-size: 16px;
   line-height: 21.79px;
+  margin: 0 12px;
 `;
 
 const StyledPlus = styled.small`
@@ -71,7 +79,6 @@ const StyledPlus = styled.small`
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
-  margin: 0 12px;
 `;
 
 const ADJECTIVES = ["FAST", "AFFORDABLE", "TRANSPARENT", "FAIR"];
@@ -87,10 +94,10 @@ const AboutUs: React.FC<IAboutUs> = ({}) => {
         </StyledDescription>
         <AdjectivesContainer>
           {ADJECTIVES.map((adjective, index) => (
-            <React.Fragment key={adjective}>
+            <AdjectiveWithPlus key={adjective}>
               <StyledAdjective>{adjective}</StyledAdjective>
               {index < ADJECTIVES.length - 1 && <StyledPlus>+</StyledPlus>}
-            </React.Fragment>
+            </AdjectiveWithPlus>
           ))}
         </AdjectivesContainer>
 

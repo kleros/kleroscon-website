@@ -1,6 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Button } from "@kleros/ui-components-library";
+import { smallScreenStyle } from "styles/smallScreenStyle";
 
 const Container = styled.div`
   position: relative;
@@ -11,6 +12,11 @@ const Container = styled.div`
   width: calc(240px + (1080 - 240) * ((100vw - 300px) / (1250 - 300)));
   padding: 26px calc(16px + (64 - 16) * ((100vw - 300px) / (1250 - 300)));
   margin: calc(48px + (128 - 48) * ((100vw - 300px) / (1250 - 300))) 0px;
+
+  ${smallScreenStyle(css`
+    flex-direction: column;
+    gap: 32px;
+  `)};
 
   &::before {
     content: "";

@@ -66,11 +66,17 @@ const StyledFooterBackground = styled(FooterBackground)`
   left: 0;
   width: 100%;
   height: 100%;
+
+  ${smallScreenStyle(css`
+    width: 1240px;
+    height: 280px;
+  `)};
 `;
 
 const StyledKlerosConText = styled(KlerosConText)`
-  width: calc(300px + (471 - 300) * ((100vw - 300px) / (1250 - 300)));
+  display: flex;
   height: 69px;
+  justify-content: flex-start;
 
   ${smallScreenStyle(css`
     width: 300px;
@@ -92,11 +98,9 @@ const LeftSide = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
 
   ${smallScreenStyle(css`
     align-items: center;
-    justify-content: flex-start;
   `)}
 `;
 
@@ -124,6 +128,8 @@ const SocialMedia = styled.div`
   display: flex;
   gap: 32px;
   z-index: 2;
+  max-width: calc(150px + (350 - 150) * ((100vw - 300px) / (1250 - 300)));
+  flex-wrap: wrap;
 
   ${smallScreenStyle(css`
     position: relative;
@@ -133,6 +139,7 @@ const SocialMedia = styled.div`
     width: 100%;
     justify-content: center;
     margin-top: 48px;
+    flex-wrap: nowrap;
   `)}
 `;
 

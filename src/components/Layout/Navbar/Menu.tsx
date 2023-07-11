@@ -28,17 +28,16 @@ const MenuContainer = styled.div`
 `;
 
 const HamburgerMenu = styled.div`
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
   display: none;
   visibility: hidden;
   background-color: ${({ theme }) => theme.color.dark};
   box-shadow: 0px 2px 3px "#00000002";
-  transition-property: transform, visibility;
-  transition-duration: "0.25s";
-  transition-timing-function: ease;
   ${smallScreenStyle(css`
     visibility: visible;
     position: absolute;
-    top: 48px;
+    top: 46px;
     right: 0;
     width: 100vw;
     padding: 24px 32px;
@@ -47,6 +46,13 @@ const HamburgerMenu = styled.div`
     gap: 24px;
     z-index: 1;
   `)}
+
+  ${({ isOpen }) =>
+    isOpen &&
+    css`
+      opacity: 1;
+      transform: translateX(0);
+    `}
 `;
 
 const StyledButton = styled(Button)`
@@ -86,6 +92,8 @@ const Menu: React.FC = () => {
   useFocusOutside(containerRef, () => {
     toggleOpen(false);
   });
+  const isSmallScreen = useWindowSize().width <= 768;
+  const showMenuContainer = !isSmallScreen || isOpen;
 
   useEffect(() => {
     if (width > 768) {
@@ -98,17 +106,16 @@ const Menu: React.FC = () => {
       <HamburgerContainer>
         <StyledHamburger onClick={toggleOpen} />
       </HamburgerContainer>
-      {isOpen ? (
-        <HamburgerMenu>
-          <MenuItems />
-          <StyledButton text="Register Now" />
-        </HamburgerMenu>
-      ) : (
+      {showMenuContainer && (
         <MenuContainer>
           <MenuItems />
           <StyledButton text="Register Now" />
         </MenuContainer>
       )}
+      <HamburgerMenu isOpen={isOpen}>
+        <MenuItems />
+        <StyledButton text="Register Now" />
+      </HamburgerMenu>
     </Container>
   );
 };
