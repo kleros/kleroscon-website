@@ -81,6 +81,10 @@ const StyledPlus = styled.small`
   line-height: normal;
 `;
 
+const StyledA = styled.a`
+  text-decoration: none;
+`;
+
 const ADJECTIVES = ["FAST", "AFFORDABLE", "TRANSPARENT", "FAIR"];
 
 const AboutUs: React.FC<IAboutUs> = ({}) => {
@@ -101,7 +105,9 @@ const AboutUs: React.FC<IAboutUs> = ({}) => {
           ))}
         </AdjectivesContainer>
 
-        <StyledButton text="Learn More" />
+        <StyledA href="https://docs.kleros.io" target="_blank">
+          <StyledButton text="Learn More" />
+        </StyledA>
       </Container>
       <StyledSectionSeparatorPurple />
     </>
